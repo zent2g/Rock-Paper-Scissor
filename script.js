@@ -34,6 +34,10 @@ function playRound(playerSelections, computerSelections){
     }
 }
 
-const playerSelections = prompt('Rock, Paper or Scissor?');
-const computerSelections = getComputerChoice();
-console.log(playRound(playerSelections, computerSelections));
+//call playRound function 5 times
+
+for(let i = 0; i < 5; i++){
+    const playerSelections = prompt('Rock, Paper or Scissor?');
+    const computerSelections = getComputerChoice();
+    console.log(playRound(playerSelections, computerSelections));
+}
