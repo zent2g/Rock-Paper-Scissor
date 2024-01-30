@@ -1,5 +1,10 @@
 //function for when computer plays
 //randomly return rock paper or scissor
+//keep track or score
+
+let playerScore = 0;
+let botScore = 0;
+
 function getComputerChoice(){
     const randomReturn = Math.floor(Math.random() * 3);
     if(randomReturn === 0){
@@ -14,27 +19,55 @@ function getComputerChoice(){
 }
 //function that plays a single round of Rock Paper Scissor with 2 parameters (playerSelections and computerSelections)
 //return a string that says something adjecent to "You Lose! Paper beats Rock"
+
 function playRound(playerSelections, computerSelections){
     if(playerSelections === computerSelections){
-        return 'It"s a tie!'
+        console.log('It"s a tie! no one gets a point!');
     } else if(playerSelections == 'Rock' && computerSelections == 'Paper'){
-        return 'You lose, Paper beats Rock!'
+        console.log('You lose, Paper beats Rock!');
+        botScore = + 1;
+        console.log(`Player has: ${playerScore} points`)
+        console.log(`Bot has: ${botScore} points`)
     } else if(playerSelections == 'Paper' && computerSelections == 'Rock'){
-        return 'You win, Paper beats Rock!'
+        console.log('You win, Paper beats Rock!');
+        playerScore = + 1;
+        console.log(`Player has: ${playerScore} points`)
+        console.log(`Bot has: ${botScore} points`)
     } else if(playerSelections == 'Scissor' && computerSelections == 'Paper'){
-        return 'You win, Scissor beats Paper!'
+        console.log('You win, Scissor beats Paper!')
+        playerScore = + 1;
+        console.log(`Player has: ${playerScore} points`)
+        console.log(`Bot has: ${botScore} points`)
     } else if(playerSelections == 'Paper' && computerSelections == 'Scissor'){
-        return 'You Lose, Scissor beats Paper!'
+        console.log('You Lose, Scissor beats Paper!');
+        botScore = + 1;
+        console.log(`Player has: ${playerScore} points`)
+        console.log(`Bot has: ${botScore} points`)
     } else if(playerSelections == 'Rock' && computerSelections == 'Scissor'){
-        return 'You win, Rock beats Scissor!'
+        console.log('You win, Rock beats Scissor!')
+        playerScore = + 1;
+        console.log(`Player has: ${playerScore} points`)
+        console.log(`Bot has: ${botScore} points`)
     } else if(playerSelections == 'Scissor' && computerSelections == 'Rock'){
-        return 'You Lose, Rock beats Scissor!'
-    } else {
-        return 'You have to pick Rock, Paper or Scissor!'
+        console.log('You Lose, Rock beats Scissor!')
+        botScore = + 1;
+        console.log(`Player has: ${playerScore} points`)
+        console.log(`Bot has: ${botScore} points`)
+    } else if(playerSelections === null || undefined){
+        botScore = + 1;
+        console.log(`You have forfeited this round ${botScore}`)
     }
+
+  }
+
+if(playerScore > botScore){
+    console.log('Player has beat bot by:'+(playerScore-botScore)+ ' points')
+}else if(botScore > playerScore){
+    console.log('Bot has beat the player by:' +(botScore-playerScore)+ ' points')
 }
 
-//call playRound function 5 times
+
+//loop playRound function 5 times
 
 for(let i = 0; i < 5; i++){
     const playerSelections = prompt('Rock, Paper or Scissor?');
