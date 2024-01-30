@@ -58,13 +58,13 @@ function playRound(playerSelections, computerSelections){
         console.log(`Bot has: ${botScore} points`)
     } else if(playerSelections === null || undefined){
         botScore = botScore + 1;
-        console.log(`You have forfeited this round ${botScore}`)
+        console.log(`You have forfeited this round bot has: ${botScore}`)
     }
   }
 
 for(let i = 0; i < 5; i++){
-    const playerSelections = prompt('Rock, Paper or Scissor?');
-    const computerSelections = getComputerChoice();
+    playerSelections = prompt("Rock, Paper or Scissor?");
+    computerSelections = getComputerChoice();
     console.log(playRound(playerSelections, computerSelections));
 }
 
