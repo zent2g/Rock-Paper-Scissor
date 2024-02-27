@@ -1,5 +1,5 @@
 # Short Description 🎲
-A classic Rock, Paper, Scissors game that can be played through the browser console.
+A classic Rock, Paper, Scissors game that can be played through buttons.
 
 ## Technologies and Tools 🔧
 1. HTML
@@ -14,4 +14,4 @@ A classic Rock, Paper, Scissors game that can be played through the browser cons
 For 1 thing and 1 thing only. Learning.
 
 ## Future Updates🔮
-i will be making a Graphical User Inferface (GUI) with buttons and text in the future.
+no more updates will be made for now.
